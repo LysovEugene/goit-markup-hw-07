@@ -1,8 +1,5 @@
 /* модалка */
 
-.modal {
-  overflow: auto;
-}
 .backdrop {
   position: fixed;
   top: 0;
@@ -11,10 +8,10 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 textarea {
@@ -48,20 +45,19 @@ textarea {
   line-height: 16px;
   letter-spacing: 0.01em;
 
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   cursor: pointer;
-}
+  &-title {
+    font-family: Roboto;
 
-.form-order-title {
-  font-family: Roboto;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
 
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: var(--title-text-color);
+    color: $title-text-color;
+  }
 }
 
 .form-label {
@@ -81,6 +77,23 @@ textarea {
   border-radius: 4px;
   padding-left: 42px;
   cursor: pointer;
+
+  &:focus ~ .form-icon {
+    fill: $accent-color;
+  }
+
+  &:focus + .form-label,
+  &:not(:placeholder-shown) + .form-label {
+    transform: translateY(-40px);
+    left: 0;
+  }
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+.form-input:focus + .form-label {
+  color: $accent-color;
 }
 .form-icon {
   position: absolute;
@@ -89,21 +102,9 @@ textarea {
   left: 16px;
   display: inline-block;
   transform: translateY(-50%);
-  fill: #212121;
+  fill: $title-text-color;
   cursor: pointer;
   transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-input:focus ~ .form-icon {
-  fill: var(--accent-color);
-}
-.form-input:focus + .form-label {
-  color: var(--accent-color);
-}
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
-  transform: translateY(-40px);
-  left: 0;
 }
 
 .btn-form-studio {
@@ -122,19 +123,16 @@ textarea {
   fill: black;
   cursor: pointer;
   transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.btn-form-studio:hover,
-.btn-form-studio:focus {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 
 .btn-send {
   margin-left: 120px;
 }
 
-.form-input:focus {
-  border: 1px solid #2196f3;
-}
 .form-comment {
   display: flex;
   flex-direction: column;
@@ -144,32 +142,31 @@ textarea {
   line-height: 16px;
   letter-spacing: 0.01em;
 
-  color: var(--primary-text-color);
-}
-.form-comment textarea {
-  position: relative;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  cursor: pointer;
+  color: $primary-text-color;
+  textarea {
+    position: relative;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
 
-  padding: 12px 16px;
-}
-.form-comment .form-label {
-  position: absolute;
+    padding: 12px 16px;
+  }
+  .form-label {
+    position: absolute;
 
-  left: 57px;
+    left: 57px;
+  }
+  &:focus {
+    border: 1px solid $accent-color;
+  }
 }
 
 .form-comment textarea:focus + .form-label {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 .form-comment textarea:focus + .form-label,
 .form-comment textarea:not(:placeholder-shown) + .form-label {
   transform: translateY(-50px);
   left: 42px;
-}
-
-.form-comment:focus {
-  border: 1px solid #2196f3;
 }

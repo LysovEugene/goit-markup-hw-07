@@ -5,11 +5,11 @@
 }
 
 .section:nth-child(4) {
-  background-color: var(--secondary-bcr);
+  background-color: $secondary-bcr;
 }
 
 .section-title {
-  color: var(--title-text-color);
+  color: $title-text-color;
 
   font-weight: 700;
   font-size: 36px;

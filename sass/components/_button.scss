@@ -1,8 +1,8 @@
 .button {
   display: inline-block;
   text-align: center;
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
+  color: $primary-white-color;
+  background-color: $accent-color;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -10,4 +10,12 @@
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 200px;
+}
+.button-footer {
+  margin-left: 12px;
+  padding-left: 29px;
+
+  padding-top: 10px;
+  padding-right: 28px;
+  padding-bottom: 10px;
 }

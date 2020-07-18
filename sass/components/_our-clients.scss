@@ -1,22 +1,18 @@
 /* постоянные клиенты */
-
+.section-clients {
+  padding-bottom: 94px;
+}
 .clients-list {
   display: flex;
   justify-content: center;
-}
-
-.clients-list .item {
-  align-items: center;
-  margin-left: 30px;
-  border-radius: 4px;
-}
-
-.clients-list .item:first-child {
-  margin-left: 0;
-}
-
-.section-clients {
-  padding-bottom: 94px;
+  .item {
+    align-items: center;
+    margin-left: 30px;
+    border-radius: 4px;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .link-clients {
@@ -36,11 +32,11 @@
 
 .icon-clients:hover,
 .icon-clients:focus {
-  fill: #2196f3;
+  fill: $accent-color;
 }
 
 .link-clients:hover,
 .link-clients:focus {
-  border: 1px solid #2196f3;
-  fill: #2196f3;
+  border: 1px solid $accent-color;
+  fill: $accent-color;
 }
