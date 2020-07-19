@@ -480,7 +480,6 @@ body {
 
 /* section */
 .section {
-  /* background-color: aqua; */
   padding-top: 94px;
 }
 
@@ -579,11 +578,6 @@ body {
   padding: 0;
 }
 
-.we-do-container {
-  padding-bottom: 94px;
-  padding-top: 0;
-}
-
 .we-do-list .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -619,6 +613,11 @@ body {
   margin-right: 0;
 }
 
+.we-do-container {
+  padding-bottom: 94px;
+  padding-top: 0;
+}
+
 /* наша команда */
 .our-team-container {
   padding-bottom: 94px;
@@ -633,6 +632,19 @@ body {
           justify-content: center;
   margin: 0;
   padding: 0;
+}
+
+.our-team-list .title {
+  color: #212121;
+  margin-bottom: 16px;
+  margin-top: 0px;
+  padding: 0;
+  text-transform: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .our-team-list .foto {
@@ -657,14 +669,24 @@ body {
   margin-right: 0;
 }
 
-.our-team-list .item:hover,
-.our-team-list .item:focus {
+.our-team-list .item:hover, .our-team-list .item:focus {
   background: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.social-network {
+.our-team-list .item .position {
+  color: #757575;
+  margin-bottom: 16px;
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.our-team-list .social-network {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -674,7 +696,13 @@ body {
   margin-right: 10px;
 }
 
-.social-network-link {
+.our-team-list .social-network .link {
+  text-decoration: none;
+  color: #212121;
+  margin-right: 10px;
+}
+
+.our-team-list .social-network-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,6 +720,10 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.our-team-list .social-network-link:hover, .our-team-list .social-network-link:focus {
+  background-color: #2196f3;
+}
+
 .icon-social-link {
   width: 20px;
   height: 20px;
@@ -700,44 +732,9 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-network-link:hover,
-.social-network-link:focus {
-  background-color: #2196f3;
-}
-
 .social-network-link:hover .icon-social-link,
 .social-network-link:focus .icon-social-link {
   fill: white;
-}
-
-.our-team-list .title {
-  color: #212121;
-  margin-bottom: 16px;
-  margin-top: 0px;
-  padding: 0;
-  text-transform: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.our-team-list .position {
-  color: #757575;
-  margin-bottom: 16px;
-  margin-top: 0;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.social-network .link {
-  text-decoration: none;
-  color: #212121;
-  margin-right: 10px;
 }
 
 /* постоянные клиенты */
@@ -1282,12 +1279,15 @@ textarea {
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter .button-filter:hover,
-.filter .button-filter:focus {
+.filter .button-filter:hover, .filter .button-filter:focus {
   color: #ffffff;
   background-color: #2196f3;
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.our-works {
+  content: "";
 }
 
 .our-works .title {
@@ -1302,10 +1302,6 @@ textarea {
   font-size: 16px;
   line-height: 1.87;
   color: #757575;
-}
-
-.foto-portfolio {
-  position: relative;
 }
 
 .our-works .p-discription {
@@ -1338,13 +1334,16 @@ textarea {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.foto-portfolio {
+  position: relative;
+}
+
 .our-works-flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /* color: teal; */
 }
 
 .flex-element {
@@ -1352,47 +1351,11 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   width: 370px;
-  /* background-color: tomato; */
   margin-right: 30px;
-  /* margin-bottom: 30px; */
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.flex-element:hover,
-.flex-element:focus-within {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-          box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-}
-
-.element-info {
-  padding-top: 20px;
-  padding-left: 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  padding-bottom: 20px;
-}
-
-.example-work {
-  position: relative;
-  overflow: hidden;
-}
-
-.flex-element:hover .p-discription {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.flex-element:focus-within .p-discription {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .flex-element .title {
@@ -1416,5 +1379,38 @@ textarea {
 
 .flex-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.flex-element:hover, .flex-element:focus-within {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+          box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.flex-element:hover .p-discription {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.flex-element:focus-within .p-discription {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.element-info {
+  padding-top: 20px;
+  padding-left: 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  padding-bottom: 20px;
+}
+
+.example-work {
+  position: relative;
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */
